@@ -28,11 +28,7 @@ public class Rover {
         commands.chars().forEach(c -> {
             switch(c) {
                 case 'F': {
-                    if (direction == 'N') {
-                        yPosition++;
-                    } else if (direction == 'S') {
-                        yPosition--;
-                    }
+                    yPosition = moveForward(yPosition, direction);
                     break;
                 }
                 case 'B': {
@@ -55,5 +51,14 @@ public class Rover {
                 }
             }
         });
+    }
+
+    private int moveForward(int yPosition, char direction) {
+        if (direction == 'N') {
+            return yPosition+1;
+        } else if (direction == 'S') {
+            return yPosition-1;
+        }
+        return yPosition;
     }
 }

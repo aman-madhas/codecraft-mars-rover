@@ -45,6 +45,12 @@ public class Rover {
                     }
                     break;
                 }
+                case 'R': {
+                    if (direction == 'N') {
+                        direction = 'E';
+                    }
+                    break;
+                }
             }
         });
     }

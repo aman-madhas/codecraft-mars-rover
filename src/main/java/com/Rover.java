@@ -36,6 +36,8 @@ public class Rover {
                 case 'B': {
                     if (direction == 'N') {
                         yPosition--;
+                    } else if (direction == 'S') {
+                        yPosition++;
                     }
                     break;
                 }

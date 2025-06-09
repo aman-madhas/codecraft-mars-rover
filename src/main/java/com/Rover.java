@@ -34,11 +34,7 @@ public class Rover {
                     break;
                 }
                 case 'B': {
-                    if (direction == 'N') {
-                        yPosition--;
-                    } else if (direction == 'S') {
-                        yPosition++;
-                    }
+                    yPosition = roverMover.moveBackward(yPosition, direction);
                     break;
                 }
                 case 'L': {

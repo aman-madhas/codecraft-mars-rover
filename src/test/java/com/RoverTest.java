@@ -35,4 +35,14 @@ public class RoverTest {
         assertEquals(1, rover.getYPosition());
         assertEquals('N', rover.getDirection());
     }
+
+    @Test
+    void moveB() {
+        Rover rover = new Rover(0, 0, 'N');
+        rover.sendCommand("B");
+
+        assertEquals(0, rover.getXPosition());
+        assertEquals(-1, rover.getYPosition());
+        assertEquals('N', rover.getDirection());
+    }
 }

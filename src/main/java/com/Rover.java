@@ -31,9 +31,15 @@ public class Rover {
                     if (direction == 'N') {
                         yPosition++;
                     }
+                    break;
+                }
+                case 'B': {
+                    if (direction == 'N') {
+                        yPosition--;
+                    }
+                    break;
                 }
             }
         });
-
     }
 }

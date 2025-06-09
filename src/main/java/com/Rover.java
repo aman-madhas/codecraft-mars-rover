@@ -2,14 +2,16 @@ package com;
 
 public class Rover {
 
-    int xPosition;
-    int yPosition;
-    char direction;
+    private int xPosition;
+    private int yPosition;
+    private char direction;
+    private RoverMover roverMover;
 
     public Rover(int x, int y, char d) {
         xPosition = x;
         yPosition = y;
         direction = d;
+        roverMover = new RoverMover();
     }
 
     int getXPosition() {
@@ -28,7 +30,7 @@ public class Rover {
         commands.chars().forEach(c -> {
             switch(c) {
                 case 'F': {
-                    yPosition = moveForward(yPosition, direction);
+                    yPosition = roverMover.moveForward(yPosition, direction);
                     break;
                 }
                 case 'B': {
@@ -51,14 +53,5 @@ public class Rover {
                 }
             }
         });
-    }
-
-    private int moveForward(int yPosition, char direction) {
-        if (direction == 'N') {
-            return yPosition+1;
-        } else if (direction == 'S') {
-            return yPosition-1;
-        }
-        return yPosition;
     }
 }

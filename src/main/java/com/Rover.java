@@ -20,6 +20,10 @@ public class Rover {
         return yPosition;
     }
 
+    char getDirection() {
+        return direction;
+    }
+
     void sendCommand(String commands) {
 
     }

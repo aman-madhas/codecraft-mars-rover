@@ -14,6 +14,6 @@ public class RoverTest {
 
         assertEquals(0, rover.getXPosition());
         assertEquals(0, rover.getYPosition());
-//        assertEquals(0, rover.getDirection());
+        assertEquals('N', rover.getDirection());
     }
 }

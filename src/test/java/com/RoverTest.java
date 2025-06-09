@@ -75,4 +75,14 @@ public class RoverTest {
         assertEquals(0, rover.getYPosition());
         assertEquals('S', rover.getDirection());
     }
+
+    @Test
+    void invalidCommandFacingSouth() {
+        Rover rover = new Rover(0, 0, 'S');
+        rover.sendCommand("X");
+
+        assertEquals(0, rover.getXPosition());
+        assertEquals(0, rover.getYPosition());
+        assertEquals('S', rover.getDirection());
+    }
 }

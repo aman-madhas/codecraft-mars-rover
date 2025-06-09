@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RoverTest {
 
     @Test
-    void givenEmptyCommandTheRoverPositionAndDirectionDoNotChange() {
+    void emptyCommandFacingNorth() {
         Rover rover = new Rover(0, 0, 'N');
         rover.sendCommand("");
 
@@ -17,7 +17,7 @@ public class RoverTest {
     }
 
     @Test
-    void givenInvalidCommandTheRoverPositionAndDirectionDoNotChange() {
+    void invalidCommandFacingNorth() {
         Rover rover = new Rover(0, 0, 'N');
         rover.sendCommand("X");
 
@@ -27,7 +27,7 @@ public class RoverTest {
     }
 
     @Test
-    void moveF() {
+    void moveFFacingNorth() {
         Rover rover = new Rover(0, 0, 'N');
         rover.sendCommand("F");
 
@@ -37,7 +37,7 @@ public class RoverTest {
     }
 
     @Test
-    void moveB() {
+    void moveBFacingNorth() {
         Rover rover = new Rover(0, 0, 'N');
         rover.sendCommand("B");
 
@@ -47,7 +47,7 @@ public class RoverTest {
     }
 
     @Test
-    void moveL() {
+    void moveLFacingNorth() {
         Rover rover = new Rover(0, 0, 'N');
         rover.sendCommand("L");
 
@@ -57,12 +57,22 @@ public class RoverTest {
     }
 
     @Test
-    void moveR() {
+    void moveRFacingNorth() {
         Rover rover = new Rover(0, 0, 'N');
         rover.sendCommand("R");
 
         assertEquals(0, rover.getXPosition());
         assertEquals(0, rover.getYPosition());
         assertEquals('E', rover.getDirection());
+    }
+
+    @Test
+    void emptyCommandFacingSouth() {
+        Rover rover = new Rover(0, 0, 'S');
+        rover.sendCommand("");
+
+        assertEquals(0, rover.getXPosition());
+        assertEquals(0, rover.getYPosition());
+        assertEquals('S', rover.getDirection());
     }
 }

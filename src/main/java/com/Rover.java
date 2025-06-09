@@ -4,10 +4,12 @@ public class Rover {
 
     int xPosition;
     int yPosition;
+    char direction;
 
-    public Rover() {
-        xPosition = 0;
-        yPosition = 0;
+    public Rover(int x, int y, char d) {
+        xPosition = x;
+        yPosition = y;
+        direction = d;
     }
 
     int getXPosition() {
@@ -16,5 +18,9 @@ public class Rover {
 
     int getYPosition() {
         return yPosition;
+    }
+
+    void sendCommand(String commands) {
+
     }
 }

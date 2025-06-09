@@ -40,6 +40,8 @@ public class Rover {
                 case 'L': {
                     if (direction == 'N') {
                         direction = 'W';
+                    } else if (direction == 'S') {
+                        direction = 'E';
                     }
                     break;
                 }

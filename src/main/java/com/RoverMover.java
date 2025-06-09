@@ -19,4 +19,13 @@ public class RoverMover {
         }
         return yPosition;
     }
+
+    char moveLeft(char direction) {
+        if (direction == 'N') {
+            return 'W';
+        } else if (direction == 'S') {
+            return 'E';
+        }
+        return direction;
+    }
 }

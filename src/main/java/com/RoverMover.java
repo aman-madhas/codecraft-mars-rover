@@ -28,4 +28,13 @@ public class RoverMover {
         }
         return direction;
     }
+
+    char moveRight(char direction) {
+        if (direction == 'N') {
+            return 'E';
+        } else if (direction == 'S') {
+            return 'W';
+        }
+        return direction;
+    }
 }

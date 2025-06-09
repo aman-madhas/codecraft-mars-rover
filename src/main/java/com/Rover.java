@@ -42,11 +42,7 @@ public class Rover {
                     break;
                 }
                 case 'R': {
-                    if (direction == 'N') {
-                        direction = 'E';
-                    } else if (direction == 'S') {
-                        direction = 'W';
-                    }
+                    direction = roverMover.moveRight(direction);
                     break;
                 }
             }

@@ -25,6 +25,15 @@ public class Rover {
     }
 
     void sendCommand(String commands) {
+        commands.chars().forEach(c -> {
+            switch(c) {
+                case 'F': {
+                    if (direction == 'N') {
+                        yPosition++;
+                    }
+                }
+            }
+        });
 
     }
 }

@@ -10,7 +10,7 @@ public class RoverTest {
     void givenEmptyCommandTheRoverPositionAndDirectionDoNotChange() {
         Rover rover = new Rover();
         assertEquals(0, rover.getXPosition());
-//        assertEquals(0, rover.getYPosition());
+        assertEquals(0, rover.getYPosition());
 //        assertEquals(0, rover.getDirection());
     }
 }

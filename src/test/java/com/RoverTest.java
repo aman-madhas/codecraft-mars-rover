@@ -115,4 +115,14 @@ public class RoverTest {
         assertEquals(0, rover.getYPosition());
         assertEquals('E', rover.getDirection());
     }
+
+    @Test
+    void moveRFacingSouth() {
+        Rover rover = new Rover(0, 0, 'S');
+        rover.sendCommand("R");
+
+        assertEquals(0, rover.getXPosition());
+        assertEquals(0, rover.getYPosition());
+        assertEquals('W', rover.getDirection());
+    }
 }

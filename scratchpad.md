@@ -35,8 +35,3 @@ Implement commands that turn the rover left/right (l,r).
 | 0, 0                   | N                 | FL       | 0, 1             | W                 |
 # mutiple commands
 # change direction: E, W
-
-
-
-
-
